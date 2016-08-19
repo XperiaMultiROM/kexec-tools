@@ -46,8 +46,8 @@ static uint32_t hammerhead_dtb_compatible(void *dtb, struct msm_id *devid, struc
     if(len > 12)
         dtb_id->board_rev = fdt32_to_cpu(((const struct msm_id *)prop)->board_rev);
 
-    //printf("DTB: found dtb platform %u hw %u soc 0x%x board %u\n",
-    //      dtb_id->platform_id, dtb_id->hardware_id, dtb_id->soc_rev, dtb_id->board_rev);
+    printf("DTB: found dtb platform %u hw %u soc 0x%x board %u\n",
+          dtb_id->platform_id, dtb_id->hardware_id, dtb_id->soc_rev, dtb_id->board_rev);
 
     if (dtb_id->platform_id != devid->platform_id ||
         dtb_id->hardware_id != devid->hardware_id) {
